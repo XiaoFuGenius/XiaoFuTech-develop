@@ -72,7 +72,7 @@ Pod::Spec.new do |s|
     wechat.ios.deployment_target = '8.0'
     wechat.source_files = 'CapacityExpansion/XF3rdEncapsulation/WechatOpenSDK/*.{h,m}'
     wechat.ios.vendored_frameworks = 'Frameworks/XiaoFuTech.framework'
-    wechat.dependency 'XiaoFuTech-release/AFNetworking'
+    wechat.dependency 'XiaoFuTech-develop/AFNetworking'
     wechat.dependency 'WechatOpenSDK'
   end
   
@@ -81,7 +81,7 @@ Pod::Spec.new do |s|
     weibo.ios.deployment_target = '8.0'
     weibo.source_files = 'CapacityExpansion/XF3rdEncapsulation/Weibo_SDK/*.{h,m}'
     weibo.ios.vendored_frameworks = 'Frameworks/XiaoFuTech.framework'
-    weibo.dependency 'XiaoFuTech-release/AFNetworking'
+    weibo.dependency 'XiaoFuTech-develop/AFNetworking'
     weibo.dependency 'Weibo_SDK'
   end
 
