@@ -3,7 +3,7 @@
 # 本地&远程 验证 podspec 文件：$ pod spec lint
 # 获取验证 podspec 文件时产生的详细信息：$ pod lib lint --verbose
 # 移除验证 podspec 文件时产生的一般警告：$ pod lib lint --allow-warnings
-# 第三方库的依赖中包含.a文件：$ pod lib lint --use-libraries
+# 第三方库的依赖中包含.a文件：$ pod lib lint --use-libraries  # 超级重要！！！
 # 第三方库是私有库，需要添加源：$ pod lib lint --sources=https://github.com/CocoaPods/Specs.git,[第三方库源]
 # 当前 podspec 文件验证：$ pod lib lint --sources=https://github.com/CocoaPods/Specs.git,https://github.com/aliyun/aliyun-specs.git,https://github.com/sinaweibosdk/weibo_ios_sdk.git --use-libraries --allow-warnings --verbose
 # 添加&更新 私有repo 中的 podspec 文件：pod repo push [私有repo] [.podspec文件路径]
@@ -49,51 +49,51 @@ Pod::Spec.new do |s|
     mta.dependency 'QQ_MTA/AutoTrack'
   end
   
-#   Bugly
-#   s.subspec 'Bugly' do |bugly|
-#     bugly.ios.deployment_target = '8.0'
-#     bugly.source_files = 'CapacityExpansion/XF3rdEncapsulation/Bugly/*.{h,m}'
-#     bugly.public_header_files = 'CapacityExpansion/XF3rdEncapsulation/Bugly/*.h'
-#     bugly.dependency 'Bugly'
-#   end
-#   
-#   AFNetworking
-#   s.subspec 'AFNetworking' do |afNet|
-#     afNet.ios.deployment_target = '8.0'
-#     afNet.source_files = 'CapacityExpansion/XF3rdEncapsulation/AFNetworking/*.{h,m}'
-#     afNet.public_header_files = 'CapacityExpansion/XF3rdEncapsulation/AFNetworking/*.h'
-#     afNet.ios.vendored_frameworks = 'Frameworks/XiaoFuTech.framework'
-#     afNet.dependency 'AFNetworking', '~> 3.0'
-#   end
-#   
-#   WechatOpenSDK
-#   s.subspec 'WechatOpenSDK' do |wechat|
-#     wechat.ios.deployment_target = '8.0'
-#     wechat.source_files = 'CapacityExpansion/XF3rdEncapsulation/WechatOpenSDK/*.{h,m}'
-#     wechat.public_header_files = 'CapacityExpansion/XF3rdEncapsulation/WechatOpenSDK/*.h'
-#     wechat.ios.vendored_frameworks = 'Frameworks/XiaoFuTech.framework'
-#     wechat.dependency 'XiaoFuTech-release/AFNetworking'
-#     wechat.dependency 'WechatOpenSDK'
-#   end
-#   
-#   Weibo_SDK，source 'https://github.com/sinaweibosdk/weibo_ios_sdk.git'
-#   s.subspec 'Weibo_SDK' do |weibo|
-#     weibo.ios.deployment_target = '8.0'
-#     weibo.source_files = 'CapacityExpansion/XF3rdEncapsulation/Weibo_SDK/*.{h,m}'
-#     weibo.public_header_files = 'CapacityExpansion/XF3rdEncapsulation/Weibo_SDK/*.h'
-#     weibo.ios.vendored_frameworks = 'Frameworks/XiaoFuTech.framework'
-#     weibo.dependency 'XiaoFuTech-release/AFNetworking'
-#     weibo.dependency 'Weibo_SDK'
-#   end
-# 
-#   AlicloudPush，source 'https://github.com/aliyun/aliyun-specs.git'
-#   s.subspec 'AlicloudPush' do |alicloudpush|
-#     alicloudpush.ios.deployment_target = '8.0'
-#     alicloudpush.source_files = 'CapacityExpansion/XF3rdEncapsulation/AlicloudPush/*.{h,m}'
-#     alicloudpush.public_header_files = 'CapacityExpansion/XF3rdEncapsulation/AlicloudPush/*.h'
-#     alicloudpush.ios.vendored_frameworks = 'Frameworks/XiaoFuTech.framework'
-#     alicloudpush.dependency 'AlicloudPush', '~> 1.9.8'
-#   end
+  # Bugly
+  s.subspec 'Bugly' do |bugly|
+    bugly.ios.deployment_target = '8.0'
+    bugly.source_files = 'CapacityExpansion/XF3rdEncapsulation/Bugly/*.{h,m}'
+    bugly.public_header_files = 'CapacityExpansion/XF3rdEncapsulation/Bugly/*.h'
+    bugly.dependency 'Bugly'
+  end
+  
+  # AFNetworking
+  s.subspec 'AFNetworking' do |afNet|
+    afNet.ios.deployment_target = '8.0'
+    afNet.source_files = 'CapacityExpansion/XF3rdEncapsulation/AFNetworking/*.{h,m}'
+    afNet.public_header_files = 'CapacityExpansion/XF3rdEncapsulation/AFNetworking/*.h'
+    afNet.ios.vendored_frameworks = 'Frameworks/XiaoFuTech.framework'
+    afNet.dependency 'AFNetworking', '~> 3.0'
+  end
+  
+  # WechatOpenSDK
+  s.subspec 'WechatOpenSDK' do |wechat|
+    wechat.ios.deployment_target = '8.0'
+    wechat.source_files = 'CapacityExpansion/XF3rdEncapsulation/WechatOpenSDK/*.{h,m}'
+    wechat.public_header_files = 'CapacityExpansion/XF3rdEncapsulation/WechatOpenSDK/*.h'
+    wechat.ios.vendored_frameworks = 'Frameworks/XiaoFuTech.framework'
+    wechat.dependency 'XiaoFuTech-develop/AFNetworking'
+    wechat.dependency 'WechatOpenSDK'
+  end
+  
+  # Weibo_SDK，source 'https://github.com/sinaweibosdk/weibo_ios_sdk.git'
+  s.subspec 'Weibo_SDK' do |weibo|
+    weibo.ios.deployment_target = '8.0'
+    weibo.source_files = 'CapacityExpansion/XF3rdEncapsulation/Weibo_SDK/*.{h,m}'
+    weibo.public_header_files = 'CapacityExpansion/XF3rdEncapsulation/Weibo_SDK/*.h'
+    weibo.ios.vendored_frameworks = 'Frameworks/XiaoFuTech.framework'
+    weibo.dependency 'XiaoFuTech-develop/AFNetworking'
+    weibo.dependency 'Weibo_SDK'
+  end
+
+  # AlicloudPush，source 'https://github.com/aliyun/aliyun-specs.git'
+  s.subspec 'AlicloudPush' do |alicloudpush|
+    alicloudpush.ios.deployment_target = '8.0'
+    alicloudpush.source_files = 'CapacityExpansion/XF3rdEncapsulation/AlicloudPush/*.{h,m}'
+    alicloudpush.public_header_files = 'CapacityExpansion/XF3rdEncapsulation/AlicloudPush/*.h'
+    alicloudpush.ios.vendored_frameworks = 'Frameworks/XiaoFuTech.framework'
+    alicloudpush.dependency 'AlicloudPush', '~> 1.9.8'
+  end
   
     # MJRefresh
 #   s.subspec 'MJRefresh' do |mj|
