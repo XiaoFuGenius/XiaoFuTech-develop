@@ -3,14 +3,15 @@
 # 本地&远程 验证 podspec 文件：$ pod spec lint
 # 获取验证 podspec 文件时产生的详细信息：$ pod lib lint --verbose
 # 移除验证 podspec 文件时产生的一般警告：$ pod lib lint --allow-warnings
-# 第三方库的依赖中包含.a文件：$ pod lib lint --use-libraries  # 超级重要！！！
+# 第三方库的依赖中包含.a文件：$ pod lib lint --use-libraries
 # 第三方库是私有库，需要添加源：$ pod lib lint --sources=https://github.com/CocoaPods/Specs.git,[第三方库源]
+# 以下说明超级重要！！！
 # 当前 podspec 文件验证：$ pod lib lint --sources=https://github.com/CocoaPods/Specs.git,https://github.com/aliyun/aliyun-specs.git,https://github.com/sinaweibosdk/weibo_ios_sdk.git --use-libraries --allow-warnings --verbose
 # 添加&更新 私有repo 中的 podspec 文件：pod repo push [私有repo] [.podspec文件路径]
 
 Pod::Spec.new do |s|
   s.name         		= "XiaoFuTech-develop" 		# 项目名称
-  s.version      		= "1.0.8" 		# 版本号 与 你仓库的 标签号 对应
+  s.version      		= "1.0.9" 		# 版本号 与 你仓库的 标签号 对应
   s.license      		= "MIT" 	 # 开源证书
   s.summary      		= "iOS 快捷开发工具包 XiaoFuTech.framework for Develop." 	# 项目简介
   s.deprecated 			= false
